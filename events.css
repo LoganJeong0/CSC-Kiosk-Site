@@ -1,0 +1,94 @@
+/* Reset default margins and stop any accidental bouncing/scrolling */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    user-select: none; /* Prevents text highlighting when people tap aggressively */
+    -webkit-user-select: none;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* Hides scrollbars entirely */
+    background-color: #111; /* Dark background hides screen gaps */
+    font-family: sans-serif;
+}
+
+/* The exact 9:16 Canvas Box */
+.events-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column; /* Stacks header, map, and nav vertically */
+    background-color: #ffffff;
+}
+
+/* Header UI Elements */
+.events-header {
+    height: 15vh; /* Takes up exactly 15% of the screen height */
+    background-color: #990000;
+    color: white; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.kiosk-nav {
+    height: 15vh; /* Takes up the bottom 15% of the screen height */
+    background-color: #222;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+}
+
+.touch-btn {
+    flex: 1;
+    margin: 0 10px;
+    height: 80%; /* Makes buttons tall and easy to hit with a finger */
+    font-size: 1.5rem;
+    font-weight: bold;
+    background-color: #990000;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer; /* Fallback but acts as touch target */
+}
+
+/* Visual touch feedback (Changes color when pressed) */
+.touch-btn:active {
+    background-color: #990000;
+}
+
+.scroll-box {
+  height: 70vh;       /* the box stays this tall */
+  background-color: bisque;
+  overflow-y: auto;    /* scrollbar appears when text doesn't fit */
+  overflow-x: hidden;
+}
+
+.scroll-box::-webkit-scrollbar {
+  width: 25px;
+}
+.scroll-box::-webkit-scrollbar-track {
+  background: transparent;              /* removes the white strip */
+}
+.scroll-box::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.25);      /* slightly see-through bar */
+  border-radius: 3px;
+}
+.scroll-box::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.events-subcontainer{
+    padding: 40px;
+    height: 30px;
+    width: 100vw;
+    justify-content: left;
+}
+
+/* Map Content Window */
