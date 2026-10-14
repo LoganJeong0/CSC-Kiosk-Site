@@ -67,10 +67,36 @@ html, body {
   object-fit: cover;        /* fill the box, crop the excess */
   object-position: center;  /* which part stays visible when cropped */
 }
+
+
+.video-section {
+  height: 85vh;
+  overflow: hidden;
+}
+
+.video-section video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;        
+  pointer-events: none;     /* clicks and taps can't pause it or open a menu */
+}
+
+.overlay {
+  padding: 20px;
+  position: absolute;
+  inset: 0;                /* covers the whole section, on top of the video */
+  z-index: 1;
+  display: flex;
+  justify-content: center; /* x */
+  align-items: flex-end;  /* y */
+  gap: 16px;               /* space between buttons */
+}
+
 /* Navigation UI Elements */
 .kiosk-nav {
     height: 15vh; /* Takes up the bottom 15% of the screen height */
-    background-color: #222;
+    background-color: transparent;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -81,7 +107,7 @@ html, body {
 .touch-btn {
     flex: 1;
     margin: 0 10px;
-    height: 80%; /* Makes buttons tall and easy to hit with a finger */
+    height: 10%; /* Makes buttons tall and easy to hit with a finger */
     font-size: 1.5rem;
     font-weight: bold;
     background-color: #990000;
