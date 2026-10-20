@@ -15,8 +15,29 @@ html, body {
     font-family: sans-serif;
 }
 
+h2 {
+  font-size: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+h2 span {
+  font-size: 30px;     /* the time on the right */
+}
+
+p {
+  font-size: 30px;
+  font-weight: bold;   /* replaces the <b> tags */
+}
+
+hr{
+  border: none;
+  border-top: 2px solid black;
+}
 /* The exact 9:16 Canvas Box */
 .events-container {
+    
     width: 100vw;
     height: 100vh;
     display: flex;
