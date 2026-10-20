@@ -102,6 +102,7 @@ html, body {
   flex: 1;
   min-height: 0;
   flex-direction: column;
+  align-items: center;
   justify-content: center;
   gap: clamp(8px, 1.5vh, 16px);
 }
@@ -118,10 +119,10 @@ html, body {
 
 /* High-Visibility Touch Buttons */
 .touch-btn {
-    flex: 1;
-    min-height: 0;
+    width: 80vw;
+    height: 8vh;
     margin: 0;
-    font-size: clamp(1rem, 2vw, 1.5rem);
+    font-size: clamp(2rem, 2vw, 2.5rem);
     font-weight: bold;
     background-color:  rgba(255,255,255,.4);
     color: black;
