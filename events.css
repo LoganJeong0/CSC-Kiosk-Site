@@ -19,11 +19,11 @@ h2 {
   font-size: 40px;
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
+  align-items:center;
 }
 
 h2 span {
-  font-size: 30px;     /* the time on the right */
+  font-size: 125px;     /* the time on the right */
 }
 
 p {
@@ -47,7 +47,7 @@ hr{
 
 /* Header UI Elements */
 .events-header {
-    height: 15vh; /* Takes up exactly 15% of the screen height */
+    height: 15vh; 
     background-color: #990000;
     color: white; 
     display: flex;
@@ -58,7 +58,7 @@ hr{
 }
 
 .kiosk-nav {
-    height: 15vh; /* Takes up the bottom 15% of the screen height */
+    height: 15vh;
     background-color: #222;
     display: flex;
     justify-content: space-around;

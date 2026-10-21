@@ -126,7 +126,7 @@ html, body {
     font-weight: bold;
     background-color:  rgba(255,255,255,.4);
     color: black;
-    border: 5px solid #111;
+    border: 3px solid #111;
     border-radius: 8px;
     cursor: pointer; /* Fallback but acts as touch target */
 }
