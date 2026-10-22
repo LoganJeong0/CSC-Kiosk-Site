@@ -13,25 +13,35 @@
         
         <!-- Example Header Area -->
         <header class="kiosk-header">
-            <h1>Welcome to the SBU Simulation Center</h1>
+            <img src="images\stony_brook_university_logo-freelogovectors.net_.png"></img>
         </header>
-<!-- 
-        <div class="image-band">
+        <!-- 
+            <div class="image-band">
         <img src="images\KioskIMG.jpg" alt="Simulation center">
-        </div> -->
-
+    </div> -->
+    
 
         <section class="video-section">
             <video autoplay muted loop playsinline>
             <source src="images\AQPu6FZ8yIxMGXTDwEe6HPY9v9bV1iGiOp0j0AmhBYY5WGVTtpELJNSE3a1eEw1xoAZ7aQui-_BMU3gp58RRsXuMObi0Z-fQvWxaOuOdrXFfeg.mp4" type="video/mp4">
             </video>
-        <!-- Example Touch Button Navigation Sidebar/Footer -->
-         <div class="buttonBox">
-            <nav class="overlay">
-                <button class="touch-btn" onclick = "location.href='events.html'">Today's Events</button>
-                <button class="touch-btn" onclick = "location.href='map.html'">Map</button>
-            </nav>
-        </div>
+            <!-- Example Touch Button Navigation Sidebar/Footer -->
+
+            <div class="video-text-overlay">
+                <h1>WELCOME TO THE CLINICAL SIMULATION CENTER</h1>
+                <h2>
+                    <div id="date"></div>
+                    <div id="time"></div>
+                    <script src="UIelements.js"></script>
+                </h2>
+            </div>
+
+            <div class="buttonBox">
+                <nav class="overlay">
+                    <button class="touch-btn" onclick = "location.href='events.html'">Today's Events</button>
+                    <button class="touch-btn" onclick = "location.href='map.html'">Map</button>
+                </nav>
+            </div>
         </section>
 
     </div>
