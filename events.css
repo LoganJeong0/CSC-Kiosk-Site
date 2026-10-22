@@ -16,18 +16,18 @@ html, body {
 }
 
 h2 {
-  font-size: 40px;
+  font-size: 28px;
   display: flex;
   justify-content: space-between;
   align-items:center;
 }
 
 h2 span {
-  font-size: 125px;     /* the time on the right */
+  font-size: 70px;     /* the time on the right */
 }
 
 p {
-  font-size: 30px;
+  font-size: 25px;
   font-weight: bold;   /* replaces the <b> tags */
 }
 
@@ -47,7 +47,7 @@ hr{
 
 /* Header UI Elements */
 .events-header {
-    height: 15vh; 
+    height: 10vh; 
     background-color: #990000;
     color: white; 
     display: flex;
@@ -85,7 +85,7 @@ hr{
 }
 
 .scroll-box {
-  height: 70vh;       /* the box stays this tall */
+  height: 75vh;       /* the box stays this tall */
   background-color: bisque;
   overflow-y: auto;    /* scrollbar appears when text doesn't fit */
   overflow-x: hidden;
