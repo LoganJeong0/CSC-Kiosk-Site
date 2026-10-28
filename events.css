@@ -1,4 +1,14 @@
-/* Reset default margins and stop any accidental bouncing/scrolling */
+@font-face {
+  font-family: 'Oswald';
+  src: url('fonts/Oswald-VariableFont_wght.woff2') format('woff2-supports-variations'),
+       url('fonts/Oswald-VariableFont_wght.woff2') format('woff2');
+  font-weight: 200 700; 
+  font-style: normal;
+  font-display: swap;
+}
+
+
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -15,20 +25,33 @@ html, body {
     font-family: sans-serif;
 }
 
+h1{
+  font-family: 'Oswald', sans-serif;
+  font-weight: 1000;
+}
+
 h2 {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
   font-size: 28px;
   display: flex;
   justify-content: space-between;
   align-items:center;
+  line-height: 1.1;
 }
 
 h2 span {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
   font-size: 70px;     /* the time on the right */
+  line-height: .9;    /* keeps the big arrow from stretching the row */
 }
 
 p {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 200;
   font-size: 25px;
-  font-weight: bold;   /* replaces the <b> tags */
+  line-height: 1.1;
 }
 
 hr{
@@ -67,6 +90,8 @@ hr{
 }
 
 .touch-btn {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
     flex: 1;
     margin: 0 10px;
     height: 80%; /* Makes buttons tall and easy to hit with a finger */
@@ -106,10 +131,11 @@ hr{
 }
 
 .events-subcontainer{
-    padding: 40px;
-    height: 30px;
-    width: 100vw;
-    justify-content: left;
+  padding: 40px;
+  padding-top: 10px;
+  height: 30px;
+  width: 100vw;
+  justify-content: left;
 }
 
 /* Map Content Window */

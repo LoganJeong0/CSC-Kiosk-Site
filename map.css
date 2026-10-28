@@ -47,6 +47,7 @@ html, body {
 
 .image-box {
   height: 500px;
+  touch-action: none;       /* lets mapzoom.js handle pinch instead of the browser */
 }
 .image-box img {
   display: block;
@@ -54,10 +55,17 @@ html, body {
   height: 100%;
   object-fit: contain;      /* whole image always visible */
   object-position: center;
+  transform-origin: 0 0;    /* zoom math in mapzoom.js assumes top-left origin */
+  pointer-events: none;     /* stops the image from being dragged like a file */
+}
+
+.image-box img.zoom-reset {
+  transition: transform 0.3s ease-out;
 }
 
 .image-container {
     height: 70vh;
+    overflow: hidden;        
     display: flex;
     align-items: center;
     justify-content: center;
@@ -66,14 +74,14 @@ html, body {
 .touch-btn {
     flex: 1;
     margin: 0 10px;
-    height: 80%; /* Makes buttons tall and easy to hit with a finger */
+    height: 80%; 
     font-size: 1.5rem;
     font-weight: bold;
     background-color: #990000;
     color: white;
     border: none;
     border-radius: 8px;
-    cursor: pointer; /* Fallback but acts as touch target */
+    cursor: pointer; 
 }
 
 /* Visual touch feedback (Changes color when pressed) */
