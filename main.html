@@ -10,15 +10,6 @@
     </head>
     <body>
         
-    <audio id="bg-audio" loop>
-      <source src="audio\elevator.mp3" type="audio/mpeg">
-    </audio>
-    <script>
-      // Browsers block sound until the user interacts, so start it on the first tap
-      document.addEventListener('pointerdown', () => {
-        document.getElementById('bg-audio').play();
-      }, { once: true });
-    </script>
 
     <!-- Main Container representing the screen -->
     <div class="kiosk-container">
