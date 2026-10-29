@@ -167,6 +167,8 @@
         document.querySelectorAll('.screen').forEach((screen) => {
           screen.classList.toggle('active', screen.id === name);
         });
+        // Blur home whenever another screen is covering it
+        document.getElementById('home').classList.toggle('blurred', name !== 'home');
       }
     </script>
     <script src="UIelements.js"></script>
