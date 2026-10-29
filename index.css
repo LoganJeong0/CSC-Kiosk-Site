@@ -1,0 +1,350 @@
+/* ================= SHARED (all screens) ================= */
+
+@font-face {
+  font-family: 'Oswald';
+  src: url('fonts/Oswald-VariableFont_wght.woff2') format('woff2-supports-variations'),
+       url('fonts/Oswald-VariableFont_wght.woff2') format('woff2');
+  font-weight: 200 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    user-select: none; /* Prevents text highlighting when people tap aggressively */
+    -webkit-user-select: none;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* Hides scrollbars entirely */
+    background-color: #111; /* Dark background hides screen gaps */
+    font-family: sans-serif;
+}
+
+/* Every screen fills the display. Home sits underneath and is never hidden,
+   so its video keeps playing; Events and Map are shown on top of it. */
+.screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+#events, #map {
+    display: none;
+    z-index: 1;
+}
+
+#events.active, #map.active {
+    display: block;
+}
+
+
+
+/* ================= HOME SCREEN (was main.css) ================= */
+
+#home h1 {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+}
+
+#home h2 {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 500;
+}
+
+#home button {
+  font-size: 3vh;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 450;
+}
+
+/* The exact 9:16 Canvas Box */
+#home .kiosk-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column; /* Stacks header, map, and nav vertically */
+    background-color: #990000;
+}
+
+/* Header UI Elements */
+
+#home .video-section {
+  height: 85vh;
+  position: relative;
+  overflow: hidden;
+}
+
+#home .video-section video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;     /* clicks and taps can't pause it or open a menu */
+}
+
+#home .video-text-overlay{
+    display: flex;
+    position: absolute;
+    color:#f0efef;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    left: 12.5vw;
+    top: 0;
+    height: 55vh;
+    width: 75vw;
+}
+
+#home .video-text-overlay h1{
+    text-align: center;
+    font-size: 6vh;
+}
+
+#home .video-text-overlay h2{
+    font-size: 3vh;
+    text-align: center;
+}
+
+#home .buttonBox{
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    padding: clamp(12px, 2vw, 24px);
+    height: 30vh;
+    align-items: stretch;
+}
+
+#home .overlay {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex: 1;
+  min-height: 0;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(8px, 1.5vh, 16px);
+}
+
+/* High-Visibility Touch Buttons */
+#home .touch-btn {
+    width: 80vw;
+    height: 8vh;
+    margin: 1vh;
+    background-color:  rgba(255,255,255,.4);
+    color: black;
+    border: 3px solid #111;
+    border-radius: 8px;
+    cursor: pointer; /* Fallback but acts as touch target */
+}
+
+/* Visual touch feedback (Changes color when pressed) */
+#home .touch-btn:active {
+    background-color: rgba(255,255,255,.5);
+}
+
+
+/* ================= EVENTS SCREEN (was events.css) ================= */
+
+#events h1{
+  font-family: 'Oswald', sans-serif;
+  font-weight: 1000;
+}
+
+#events h2 {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+  font-size: 28px;
+  display: flex;
+  justify-content: space-between;
+  align-items:center;
+  line-height: 1.1;
+}
+
+#events h2 span {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+  font-size: 70px;     /* the arrow on the right */
+  line-height: .9;    /* keeps the big arrow from stretching the row */
+}
+
+#events p {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 200;
+  font-size: 25px;
+  line-height: 1.1;
+}
+
+#events hr{
+  border: none;
+  border-top: 2px solid black;
+}
+
+/* The exact 9:16 Canvas Box */
+#events .events-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column; /* Stacks header, list, and nav vertically */
+    background-color: #ffffffb8;
+}
+
+/* Header UI Elements */
+#events .events-header {
+    height: 15vh; /* Takes up exactly 15% of the screen height */
+    background-color: #ffffff;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#events .events-header img{
+    height: 15vh;
+}
+
+#events .kiosk-nav {
+    height: 15vh;
+    background-color: #222;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+}
+
+#events .touch-btn {
+    font-family: 'Oswald', sans-serif;
+    flex: 1;
+    margin: 0 10px;
+    height: 80%; /* Makes buttons tall and easy to hit with a finger */
+    font-size: 1.5rem;
+    font-weight: bold;
+    background-color: #990000;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer; /* Fallback but acts as touch target */
+}
+
+/* Visual touch feedback (Changes color when pressed) */
+#events .touch-btn:active {
+    background-color: #990000;
+}
+
+#events .scroll-box {
+  height: 70vh;       /* the box stays this tall */
+  backdrop-filter: blur(5px);
+  background-color: rgba(255, 255, 255, 0.34);
+  overflow-y: auto;    /* scrollbar appears when text doesn't fit */
+  overflow-x: hidden;
+}
+
+#events .scroll-box::-webkit-scrollbar {
+  width: 25px;
+}
+#events .scroll-box::-webkit-scrollbar-track {
+  background: transparent;              /* removes the white strip */
+}
+#events .scroll-box::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.25);      /* slightly see-through bar */
+  border-radius: 3px;
+}
+#events .scroll-box::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+#events .events-subcontainer{
+  padding: 40px;
+  padding-top: 10px;
+  height: 30px;
+  width: 100vw;
+  justify-content: left;
+}
+
+
+/* ================= MAP SCREEN (was map.css) ================= */
+
+/* The exact 9:16 Canvas Box */
+#map .body-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column; /* Stacks header, map, and nav vertically */
+    background-color: #ffffff;
+}
+
+/* Header UI Elements */
+#map .map-header {
+    height: 15vh; /* Takes up exactly 15% of the screen height */
+    background-color: #990000;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#map .kiosk-nav {
+    height: 15vh; /* Takes up the bottom 15% of the screen height */
+    background-color: #222;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+}
+
+#map .image-box {
+  height: 500px;
+  touch-action: none;       /* lets mapzoom.js handle pinch instead of the browser */
+}
+#map .image-box img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;      /* whole image always visible */
+  object-position: center;
+  transform-origin: 0 0;    /* zoom math in mapzoom.js assumes top-left origin */
+  pointer-events: none;     /* stops the image from being dragged like a file */
+}
+
+#map .image-box img.zoom-reset {
+  transition: transform 0.3s ease-out;
+}
+
+#map .image-container {
+    height: 70vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#map .touch-btn {
+    flex: 1;
+    margin: 0 10px;
+    height: 80%;
+    font-size: 1.5rem;
+    font-weight: bold;
+    background-color: #990000;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* Visual touch feedback (Changes color when pressed) */
+#map .touch-btn:active {
+    background-color: #990000;
+}

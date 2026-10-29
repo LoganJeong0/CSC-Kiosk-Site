@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>CSC Kiosk</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <!-- ===================== HOME SCREEN ===================== -->
+    <!-- Always shown underneath the other screens so the video never stops -->
+    <section id="home" class="screen active">
+        <div class="kiosk-container">
+
+            <header class="kiosk-header">
+                <img src="images\CSC White Circle Logo.png">
+            </header>
+
+            <section class="video-section">
+                <video autoplay muted loop playsinline>
+                <source src="images\AQPu6FZ8yIxMGXTDwEe6HPY9v9bV1iGiOp0j0AmhBYY5WGVTtpELJNSE3a1eEw1xoAZ7aQui-_BMU3gp58RRsXuMObi0Z-fQvWxaOuOdrXFfeg.mp4" type="video/mp4">
+                </video>
+
+                <div class="video-text-overlay">
+                    <h1>WELCOME TO THE CLINICAL SIMULATION CENTER</h1>
+                    <h2>
+                        <div id="date"></div>
+                        <div id="time"></div>
+                    </h2>
+                </div>
+
+                <div class="buttonBox">
+                    <nav class="overlay">
+                        <button class="touch-btn" onclick="showScreen('events')">Today's Events</button>
+                        <button class="touch-btn" onclick="showScreen('map')">Map</button>
+                    </nav>
+                </div>
+            </section>
+
+        </div>
+    </section>
+
+
+    <!-- ===================== EVENTS SCREEN ===================== -->
+    <section id="events" class="screen">
+        <div class="events-container">
+
+            <header class="events-header">
+                <img src="images\stony_brook_university_logo-freelogovectors.net_.png">
+            </header>
+
+            <div class="scroll-box">
+                <div class="events-subcontainer">
+
+                    <!-- EVENTS START HERE---------------------------------------------------------------------------------------------- -->
+                    <h2>                                                     <!--CHANGE "Event #1", "10:00 AM - 11:00 AM" AND "Room" TO CHANGE TEXT-->
+                    <b>General Surgery Midline Cath Training</b>
+                    <span>→</span>
+                    </h2>
+                    <p> <b>Sim Lab 2</b></p>
+                    <br>
+                    <hr>
+
+                    <h2>
+                    <b>Internal Medicine Resident Session</b>
+                    <span>←</span>
+                    </h2>
+                    <p> <b>Conference Room</b></p>
+                    <br>
+                    <hr>
+
+                    <h2>
+                    <b>Nuero Clerkship OSCE 1a</b>
+                    <span>↑</span>
+                    </h2>
+                    <p> <b>Classroom 1</b></p>
+                    <br>
+                    <hr>
+
+                    <h2>
+                    <b>Internel Medicine Resident Session</b>
+                    <span>←</span>
+                    </h2>
+                    <p> <b>Conference Room</b></p>
+                    <br>
+                    <hr>
+
+                    <h2>
+                    <b>Internal Medicine Resident Session</b>
+                    <span>←</span>
+                    </h2>
+                    <p> <b>Conference Room</b></p>
+                    <br>
+                    <hr>
+
+                    <h2>
+                    <b>Nuero Clerkship OSCE 1a</b>
+                    <span>↑</span>
+                    </h2>
+                    <p> <b>Classroom 1</b></p>
+                    <br>
+                    <hr>
+
+                    <h2>
+                    <b>Internel Medicine Resident Session</b>
+                    <span>←</span>
+                    </h2>
+                    <p><b>Conference Room</b></p>
+
+
+
+
+                    <!-- [OUTDATED INSTRUCTIONS - CHANGE LATER] YOU CAN COPY PASTE THE 5 (grayed out) LINES BELOW AND HIT ctrl + / TO UNCOMMENT THE CODE TO ADD MORE EVENTS. INLCLUDE <br>; <hr>; <br> (last 3 lines at the bottom) IF ItS THE LAST ENTRY  -->
+
+                    <!-- <h2>
+                    <b>[FILL NAME HERE]</b>
+                    <span>[FILL ARROW HERE]}</span>
+                    </h2>
+                    <p style="font-size: 30px;"> <b>[FILL ROOM HERE]</b></p> -->
+
+
+
+                    <!-- ADD THIS TO THE BOTTOM TO CREATE THE DIVIDER BETWEEN ENTRIES-->
+
+                    <!-- <br>
+                    <hr>
+                    <br> -->
+
+                    <!-- EVENTS END HERE---------------------------------------------------------------------------------------------- -->
+
+                </div>
+            </div>
+
+            <nav class="kiosk-nav">
+                <button class="touch-btn" onclick="showScreen('home')">Return to Home</button>
+                <button class="touch-btn" onclick="showScreen('map')">Go to Map</button>
+            </nav>
+
+        </div>
+    </section>
+
+
+    <!-- ===================== MAP SCREEN ===================== -->
+    <section id="map" class="screen">
+        <div class="body-container">
+
+            <header class="map-header">
+                <h1>CSC Map</h1>
+            </header>
+
+            <div class="image-container">
+                <div class="image-box">
+                <img src="images\CSC Map 2025 - V1.png" alt="Simulation center Map">
+                </div>
+            </div>
+
+            <nav class="kiosk-nav">
+                <button class="touch-btn" onclick="showScreen('home')">Return to Home</button>
+                <button class="touch-btn" onclick="showScreen('events')">Today's Events</button>
+            </nav>
+
+        </div>
+    </section>
+
+
+    <script>
+      // Switches screens without loading a new page. Home is never hidden,
+      // the other screens just cover it.
+      function showScreen(name) {
+        document.querySelectorAll('.screen').forEach((screen) => {
+          screen.classList.toggle('active', screen.id === name);
+        });
+      }
+    </script>
+    <script src="UIelements.js"></script>
+    <script src="mapzoom.js"></script>
+</body>
+</html>
