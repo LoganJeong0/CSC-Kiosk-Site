@@ -7,15 +7,15 @@
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
+    <header class="kiosk-header">
+        <img src="images\CSC White Circle Logo.png">
+    </header>
+
 
     <!-- ===================== HOME SCREEN ===================== -->
     <!-- Always shown underneath the other screens so the video never stops -->
     <section id="home" class="screen active">
         <div class="kiosk-container">
-
-            <header class="kiosk-header">
-                <img src="images\CSC White Circle Logo.png">
-            </header>
 
             <section class="video-section">
                 <video autoplay muted loop playsinline>
@@ -45,10 +45,6 @@
     <!-- ===================== EVENTS SCREEN ===================== -->
     <section id="events" class="screen">
         <div class="events-container">
-
-            <header class="events-header">
-                <img src="images\stony_brook_university_logo-freelogovectors.net_.png">
-            </header>
 
             <div class="scroll-box">
                 <div class="events-subcontainer">
@@ -145,10 +141,6 @@
     <section id="map" class="screen">
         <div class="body-container">
 
-            <header class="map-header">
-                <h1>CSC Map</h1>
-            </header>
-
             <div class="image-container">
                 <div class="image-box">
                 <img src="images\CSC Map 2025 - V1.png" alt="Simulation center Map">
@@ -168,6 +160,10 @@
       // Switches screens without loading a new page. Home is never hidden,
       // the other screens just cover it.
       function showScreen(name) {
+        // Start the events list at the top for each new visitor
+        if (name === 'events') {
+          document.querySelector('#events .scroll-box').scrollTop = 0;
+        }
         document.querySelectorAll('.screen').forEach((screen) => {
           screen.classList.toggle('active', screen.id === name);
         });

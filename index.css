@@ -29,22 +29,52 @@ html, body {
    so its video keeps playing; Events and Map are shown on top of it. */
 .screen {
     position: fixed;
-    top: 0;
+    top: 15vh;
     left: 0;
     width: 100vw;
-    height: 100vh;
+    height: 75vh;
 }
 
+/* Closed: below the display and hidden. visibility waits until the
+   slide-down finishes (0.35s delay) so the screen doesn't vanish mid-slide. */
 #events, #map {
-    display: none;
     z-index: 1;
+    transform: translateY(100vh);
+    visibility: hidden;
+    transition: transform 0.75s cubic-bezier(0.22, 1, 0.36, 1), visibility 0s linear 0.75s;
+    will-change: transform;   /* prepares the slide ahead of time so the first frame doesn't hitch */
 }
 
+/* Open: slides up into place. z-index 2 keeps the incoming screen above the
+   one sliding away when switching between Events and Map. */
 #events.active, #map.active {
-    display: block;
+    z-index: 2;
+    transform: translateY(0);
+    visibility: visible;
+    transition: transform 0.75s cubic-bezier(0.22, 1, 0.36, 1), visibility 0s;
 }
 
 
+.kiosk-header {
+    width: 100vw;
+    height: 15vh; /* Takes up exactly 15% of the screen height */
+    background-color: #990000;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    z-index: 3;   /* stays above the sliding screens */
+}
+
+.kiosk-header img{
+  position: relative;
+  left: 15px;
+  height: 12.5vh;
+}
 
 /* ================= HOME SCREEN (was main.css) ================= */
 
@@ -199,20 +229,6 @@ html, body {
 }
 
 /* Header UI Elements */
-#events .events-header {
-    height: 15vh; /* Takes up exactly 15% of the screen height */
-    background-color: #ffffff;
-    color: white;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-#events .events-header img{
-    height: 15vh;
-}
 
 #events .kiosk-nav {
     height: 15vh;
@@ -285,16 +301,6 @@ html, body {
 }
 
 /* Header UI Elements */
-#map .map-header {
-    height: 15vh; /* Takes up exactly 15% of the screen height */
-    background-color: #990000;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
 
 #map .kiosk-nav {
     height: 15vh; /* Takes up the bottom 15% of the screen height */
@@ -320,7 +326,7 @@ html, body {
 }
 
 #map .image-box img.zoom-reset {
-  transition: transform 0.3s ease-out;
+  transition: transform .75s ease-out;
 }
 
 #map .image-container {
