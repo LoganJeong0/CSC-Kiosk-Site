@@ -10,5 +10,6 @@ function updateClock() {
   document.getElementById('date').textContent = date;
 }
 
+
 updateClock();
 setInterval(updateClock, 1000);

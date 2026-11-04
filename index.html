@@ -9,6 +9,7 @@
 <body>
     <header class="kiosk-header">
         <img src="images\CSC White Circle Logo.png">
+        <h1>CLINICAL SIMULATION CENTER</h1>
         <!-- <img src="images\SBM-horz_white1.png"> -->
     </header>
 
@@ -48,81 +49,34 @@
         <div class="events-container">
 
             <div class="scroll-box">
-                <div class="events-subcontainer">
+                <div class="events-subcontainer" id="event-list">
 
                     <!-- EVENTS START HERE---------------------------------------------------------------------------------------------- -->
-                    <h2>                                                     <!--CHANGE "Event #1", "10:00 AM - 11:00 AM" AND "Room" TO CHANGE TEXT-->
-                    <b>General Surgery Midline Cath Training</b>
+                    <!-- <h2>                                                    
                     <span>→</span>
                     </h2>
-                    <p> <b>Sim Lab 2</b></p>
+                    <p> <b>Room</b></p>
+                    <br>
+                    <hr> -->
+
+
+                    <!-- [To hardcode events] YOU CAN COPY PASTE THE 5 (grayed out) LINES BELOW AND HIT ctrl + / TO UNCOMMENT THE CODE TO ADD MORE EVENTS. INLCLUDE <br>; <hr>; <br> (last 3 lines at the bottom) IF ItS THE LAST ENTRY  -->
+
+                    <!--
+                    (START, DO NOT COPY THIS)
+
+                    <h2>
+                    <b>[EVENT TITLE]</b>
+                    <span>[ARROWS: copy and paste: ← ↑ → ↓]</span>
+                    </h2>
+                    <p> <b>[ROOM]</b></p>
                     <br>
                     <hr>
 
-                    <h2>
-                    <b>Internal Medicine Resident Session</b>
-                    <span>←</span>
-                    </h2>
-                    <p> <b>Conference Room</b></p>
-                    <br>
-                    <hr>
+                    (END, DO NOT COPY THIS)
 
-                    <h2>
-                    <b>Neuro Clerkship OSCE 1a</b>
-                    <span>↑</span>
-                    </h2>
-                    <p> <b>Classroom 1</b></p>
-                    <br>
-                    <hr>
-
-                    <h2>
-                    <b>Internal Medicine Resident Session</b>
-                    <span>←</span>
-                    </h2>
-                    <p> <b>Conference Room</b></p>
-                    <br>
-                    <hr>
-
-                    <h2>
-                    <b>Internal Medicine Resident Session</b>
-                    <span>←</span>
-                    </h2>
-                    <p> <b>Conference Room</b></p>
-                    <br>
-                    <hr>
-
-                    <h2>
-                    <b>Neuro Clerkship OSCE 1a</b>
-                    <span>↑</span>
-                    </h2>
-                    <p> <b>Classroom 1</b></p>
-                    <br>
-                    <hr>
-
-                    <h2>
-                    <b>Internal Medicine Resident Session</b>
-                    <span>←</span>
-                    </h2>
-                    <p><b>Conference Room</b></p>
-
-
-
-
-                    <!-- [OUTDATED INSTRUCTIONS - CHANGE LATER] YOU CAN COPY PASTE THE 5 (grayed out) LINES BELOW AND HIT ctrl + / TO UNCOMMENT THE CODE TO ADD MORE EVENTS. INLCLUDE <br>; <hr>; <br> (last 3 lines at the bottom) IF ItS THE LAST ENTRY  -->
-
-                    <!-- <h2>
-                    <b>[FILL NAME HERE]</b>
-                    <span>[FILL ARROW HERE]}</span>
-                    </h2>
-                    <p style="font-size: 30px;"> <b>[FILL ROOM HERE]</b></p> -->
-
-
-
-                    <!-- ADD THIS TO THE BOTTOM TO CREATE THE DIVIDER BETWEEN ENTRIES-->
-
-                    <!-- <br>
-                    <hr>
-                    <br> -->
+                    NOTE: If youre making the last entry on the page, you do not need to have the last 2 lines <br>, <hr>
+                    -->
 
                     <!-- EVENTS END HERE---------------------------------------------------------------------------------------------- -->
 
@@ -170,9 +124,20 @@
         });
         // Blur home whenever another screen is covering it
         document.getElementById('home').classList.toggle('blurred', name !== 'home');
+
+
+        const video = document.querySelector('#home video');
+        if (name === 'home') {
+          const playing = video.play();
+          if (playing && playing.catch) playing.catch(() => {});   // older WebViews don't return a promise
+        } else {
+          video.pause();
+        }
       }
     </script>
+
     <script src="UIelements.js"></script>
     <script src="mapzoom.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>
