@@ -12,7 +12,7 @@
 11/4/2026	Anesthesia Resident Session	Sim Lab 1
 11/4/2026	Acute Care Clerkship Skills Session 2	Exam Rooms 13 & 17
 11/4/2026	Pediatric Dept Mock Code	Conference Room
-11/5/2026	ICM Vital Signs Session	Classroom 2
+11/5/2026	ICM Vital Signs Session	Classroom 1
 11/5/2026	SON Psych NP HNG 537/SSW IPE OSCE	Classroom 1
 11/5/2026	ICM Head & Neck Exam OSCE	Classroom 2
 11/6/2026	PA Program 2 OSCE 2	Classroom 2

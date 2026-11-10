@@ -38,7 +38,6 @@ async function main() {
         }
         const event = [sections[1], sections[2], arrow]
         todaySched.push(event);
-        console.log("ALKSJDOWJOJEQOWJEO");
     }
 }
 renderEvents(todaySched);
@@ -49,9 +48,9 @@ function renderEvents(events) {
   list.textContent = '';                      // clear old entries so a rerun doesn't duplicate them
 
   if (events.length === 0) {
-    const p = document.createElement('p');
-    p.textContent = 'No events scheduled today';
-    list.appendChild(p);
+    const h1 = document.createElement('p');
+    h1.textContent = 'No events scheduled today';
+    list.appendChild(h1);
     return;
   }
 
