@@ -13,7 +13,7 @@ async function main() {
     ["Sim Lab 1",          "→"],
     ["Sim Lab 2",          "→"],
     ["Sim Lab 3",          "→"],
-    ["Exam Rooms 13 & 17", "←"]
+    ["Exam 13 & 17", "←"]
     ];
 
   
