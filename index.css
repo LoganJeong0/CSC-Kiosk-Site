@@ -278,8 +278,7 @@ html, body {
 
 #events .scroll-box {
   height: 70vh;       /* the box stays this tall */
-  /* backdrop-filter: blur(5px); */
-  background-color: #ffffff5c;
+  background-color: #ffffff;
   overflow-y: auto;    /* scrollbar appears when text doesn't fit */
   overflow-x: hidden;
 }
