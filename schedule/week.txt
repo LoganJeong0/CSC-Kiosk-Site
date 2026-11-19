@@ -1,20 +1,16 @@
-11/17/2026	OB/GYN Clerkship OSCE 2 - Part 1	12:30 PM	Classroom 1
-11/17/2026	Medicine Clerkship Ultrasound Session 2	3:00 PM	Procedural Skills
-11/17/2026	Neuro Clerkship OSCE 2	4:00 PM	Classroom 2
-11/18/2026	OB/GYN Anesthesia Resident Workshop	10:00 AM	Conference Room
-11/18/2026	OB/GYN Clerkship OSCE 2 - Part 2	12:00 PM	Classroom 1
-11/18/2026	PALS Recert Course	2:00 PM	Sim Lab 2
-11/18/2026	Internal Medicine Resident Session	11:00 AM	Conference Room
-11/18/2026	Pre-Med Airway/Intubation Workshop	1:00 PM	Procedural Skills
-11/18/2026	ICM Final Prep OSCE	5:00 PM	Classroom 2
-11/18/2026	Pediatric Dept Mock Code	4:00 PM	Conference Room
-11/18/2026	Anesthesia TEE/TTE Skills Session	4:30 PM	Sim Lab 3
-11/18/2026	SOM Ultrasound Academy	6:00 PM	Classroom 1
-11/18/2026	Suture Workshop (Undergrad Pre-Health Students)	6:00 PM	Procedural Skills
 11/19/2026	ICM Final Prep OSCE	5:00 PM	Classroom 2
-11/19/2026	TEST CASES	9:38 AM	Classroom 2
 11/19/2026	PCCM Fellows Code Blue Training	2:00 PM	Conference Room
+11/19/2026	Filming - Hospital	4:30 PM	Sim Lab 3
 11/20/2026	TIME Block 1 OSCE	4:00 PM	Classroom 1
-11/20/2026	PCCM Fellows Ultrasound Course	12:00 PM	Classroom 2
+11/20/2026	PCCM Fellows Ultrasound Course	12:00 PM	Exam 13 & 17
 11/20/2026	High School Site Visit	1:45 PM	Classroom 2
 11/20/2026	PCCM Fellows Skills	4:30 PM	Procedural Skills
+11/23/2026	Emergency Medicine Clerkship Sim	10:30 AM	Sim Lab 1
+11/23/2026	Pediatric Clerkship Orientation Skills Session	12:00 PM	Procedural Skills
+11/23/2026	Anesthesia TEE/TTE Skills Session	3:00 PM	Procedural Skills
+11/24/2026	GI OSCE	12:45 PM	Classroom 1
+11/24/2026	Acute Care Clerkship OSCE 1b	3:45 PM	Classroom 1
+11/24/2026	Nurse Residency Hybrid Simulation	3:00 PM	Conference Room
+11/24/2026	Acute Care/Anesthesia Clerkship Skills	2:00 PM	Procedural Skills
+11/25/2026	Internal Medicine Resident Session	11:00 AM	Conference Room
+11/25/2026	Anesthesia TEE/TTE Skills Session	1:00 PM	Sim Lab 3
