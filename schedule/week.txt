@@ -1,19 +1,20 @@
-11/17/2026	OB/GYN Clerkship OSCE 2 - Part 1	Classroom 1
-11/17/2026	Medicine Clerkship Ultrasound Session 2	Procedural Skills
-11/17/2026	Neuro Clerkship OSCE 2	Classroom 2
-11/18/2026	OB/GYN Anesthesia Resident Workshop	Conference Room
-11/18/2026	OB/GYN Clerkship OSCE 2 - Part 2	Classroom 1
-11/18/2026	PALS Recert Course	Sim Lab 2
-11/18/2026	Internal Medicine Resident Session	Conference Room
-11/18/2026	Pre-Med Airway/Intubation Workshop	Procedural Skills
-11/18/2026	ICM Final Prep OSCE	Classroom 2
-11/18/2026	Pediatric Dept Mock Code	Conference Room
-11/18/2026	Anesthesia TEE/TTE Skills Session	Sim Lab 3
-11/18/2026	SOM Ultrasound Academy	Classroom 1
-11/18/2026	Suture Workshop (Undergrad Pre-Health Students)	Procedural Skills
-11/19/2026	ICM Final Prep OSCE	Classroom 2
-11/19/2026	PCCM Fellows Code Blue Training	Conference Room
-11/20/2026	TIME Block 1 OSCE	Classroom 1
-11/20/2026	PCCM Fellows Ultrasound Course	Classroom 2
-11/20/2026	High School Site Visit	Classroom 2
-11/20/2026	PCCM Fellows Skills	Procedural Skills
+11/17/2026	OB/GYN Clerkship OSCE 2 - Part 1	12:30 PM	Classroom 1
+11/17/2026	Medicine Clerkship Ultrasound Session 2	3:00 PM	Procedural Skills
+11/17/2026	Neuro Clerkship OSCE 2	4:00 PM	Classroom 2
+11/18/2026	OB/GYN Anesthesia Resident Workshop	10:00 AM	Conference Room
+11/18/2026	OB/GYN Clerkship OSCE 2 - Part 2	12:00 PM	Classroom 1
+11/18/2026	PALS Recert Course	2:00 PM	Sim Lab 2
+11/18/2026	Internal Medicine Resident Session	11:00 AM	Conference Room
+11/18/2026	Pre-Med Airway/Intubation Workshop	1:00 PM	Procedural Skills
+11/18/2026	ICM Final Prep OSCE	5:00 PM	Classroom 2
+11/18/2026	Pediatric Dept Mock Code	4:00 PM	Conference Room
+11/18/2026	Anesthesia TEE/TTE Skills Session	4:30 PM	Sim Lab 3
+11/18/2026	SOM Ultrasound Academy	6:00 PM	Classroom 1
+11/18/2026	Suture Workshop (Undergrad Pre-Health Students)	6:00 PM	Procedural Skills
+11/19/2026	ICM Final Prep OSCE	5:00 PM	Classroom 2
+11/19/2026	PCCM Fellows Code Blue Training	2:00 PM	Conference Room
+11/20/2026	TIME Block 1 OSCE	4:00 PM	Classroom 1
+11/20/2026	PCCM Fellows Ultrasound Course	12:00 PM	Classroom 2
+11/20/2026	High School Site Visit	1:45 PM	Classroom 2
+11/20/2026	PCCM Fellows Skills	4:30 PM	Procedural Skills
+

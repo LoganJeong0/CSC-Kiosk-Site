@@ -2,8 +2,40 @@ function todayShort() {
   return new Date().toLocaleDateString('en-US');
 }
 
+function toMilitary(hour, tag){
+  tag = tag.toLowerCase();
+  if (tag == "pm" && hour != 12){ 
+    hour += 12;
+  }
+  if (tag == "am" && hour == 12){ 
+    hour = 0;
+  }
+  return hour;
+}
+
+
+function toMinutes(timeText){
+  const [clock, tag] = timeText.trim().split(' ');   // "2:30", "PM"
+  const [hour, minute] = clock.split(':').map(Number);
+  return toMilitary(hour, tag || '') * 60 + minute;
+}
+
+
+let todaySched = [];
+
+// Shows only the events that haven't ended yet
+function showUpcoming(){
+  const now = new Date();
+  const nowMinutes = now.getHours() * 60 + now.getMinutes();
+  const upcoming = todaySched.filter((event) => {
+    const end = toMinutes(event[3]);
+    return isNaN(end) || end > nowMinutes;   // keep events with a missing/garbled end time
+  });
+  renderEvents(upcoming);
+}
+
 async function main() {
-    let todaySched = [];
+    const sched = [];
     const rooms = [
     ["Classroom 1",        "↑"],
     ["Classroom 2",        "↑"],
@@ -18,7 +50,8 @@ async function main() {
 
   
 
-  const res = await fetch('schedule/week.txt');      // path is relative to the HTML file
+  // ?t= makes each request unique so the browser can't hand back an old cached copy
+  const res = await fetch('schedule/week.txt?t=' + Date.now());      // path is relative to the HTML file
   if (!res.ok) {                             // like checking fopen() for NULL
     console.log('Could not open file: ' + res.status);
     return;
@@ -27,20 +60,22 @@ async function main() {
 
   const lines = text.split(/\r?\n/);   // handles both \n and \r\n line endings
   for (let i = 0; i < lines.length; i++) {
-    const sections = lines[i].split('\t');      //[date, title, room]
+    const sections = lines[i].split('\t');      //[date, title, end time, room]
     let arrow = "Unknown";
-    if(sections[0] == todayShort() && sections[2] != "Offsite 1"){
+    if(sections[0] == todayShort() && sections[3] != "Offsite 1"){
         for (let j = 0; j < rooms.length; j++){
-            if (sections[2] == rooms[j][0]){
+            if (sections[3] == rooms[j][0]){
                 arrow = rooms[j][1]
                 break;
             }
         }
-        const event = [sections[1], sections[2], arrow]
-        todaySched.push(event);
+        const event = [sections[1], sections[3], arrow, sections[2] || '']
+        sched.push(event);
     }
 }
-renderEvents(todaySched);
+// Swap in the new list only after the file loaded fine, so a failed download keeps the old one
+todaySched = sched;
+showUpcoming();
 }
 
 function renderEvents(events) {
@@ -81,3 +116,5 @@ function renderEvents(events) {
 }
 
 main();
+setInterval(showUpcoming, 60 * 1000);   // drop ended events every minute
+setInterval(main, 10 * 60 * 1000);      // re-download week.txt every 10 minutes (new uploads, new day)
